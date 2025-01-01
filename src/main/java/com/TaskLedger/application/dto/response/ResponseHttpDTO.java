@@ -10,10 +10,10 @@ import org.springframework.http.HttpStatus;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResponseHttpDTO {
+public class ResponseHttpDTO<T> {
     private HttpStatus status;
     private String message;
-    private Object response;
+    private T response;
 
     public ResponseHttpDTO(HttpStatus status, String message) {
         this.status = status;
